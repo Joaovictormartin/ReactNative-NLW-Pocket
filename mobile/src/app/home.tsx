@@ -18,7 +18,7 @@ export default function Home() {
   const [markets, setMarkets] = useState<MarketsProps[]>([]);
   const [categories, setCategories] = useState<CategoryProps[]>([]);
 
-  async function fetchCategories() {
+  const fetchCategories = async () => {
     try {
       const { data } = await api("/categories");
       setCategories(data);
@@ -27,8 +27,9 @@ export default function Home() {
       console.log(error);
       Alert.alert("Categorias", "Não foi possivel carregar as categorias");
     }
-  }
-  async function fetchMarkets() {
+  };
+
+  const fetchMarkets = async () => {
     try {
       if (!category) return;
 
@@ -38,9 +39,9 @@ export default function Home() {
       console.log(error);
       Alert.alert("Locais", "Não foi possivel carregar os locais");
     }
-  }
+  };
 
-  async function getCurrentLocation() {
+  const getCurrentLocation = async () => {
     try {
       const { granted } = await Location.requestForegroundPermissionsAsync();
 
@@ -51,7 +52,7 @@ export default function Home() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   useEffect(() => {
     fetchCategories();
