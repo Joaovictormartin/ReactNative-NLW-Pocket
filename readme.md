@@ -21,10 +21,6 @@ O **Nearby App** oferece as seguintes funcionalidades principais:
     <p>Obs: A tela branca de fundo foi utilizada apenas para simular a câmera, </br>já que no emulador do iOS não foi possível utilizar a funcionalidade da câmera.</p>
 </div>
 
-<video src="./banner/screenshot.webm" width="600" controls autoplay loop>
-  Seu navegador não suporta o elemento <code>video</code>.
-</video>
-
 ---
 
 ## Como executar o projeto
